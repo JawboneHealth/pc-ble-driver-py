@@ -100,10 +100,11 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
     keywords="nordic nrf51 nrf52 ble bluetooth softdevice serialization bindings pc-ble-driver pc-ble-driver-py "
     "pc_ble_driver pc_ble_driver_py",
-    python_requires=">=3.7, <3.11",
+    python_requires=">=3.7, <3.12",
     install_requires=requirements,
     packages=packages,
     package_data={
@@ -112,4 +113,5 @@ setup(
         "pc_ble_driver_py.hex.sd_api_v2": ["*.hex"],
         "pc_ble_driver_py.hex.sd_api_v5": ["*.hex", "*.zip"],
     },
+    cmake_args=['--log-level VERBOSE', '--fresh'],
 )
